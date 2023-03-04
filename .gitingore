@@ -1,1 +1,2 @@
-*.json
+#Ingore files in data folder
+data/
