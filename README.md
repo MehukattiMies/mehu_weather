@@ -1,5 +1,6 @@
 # Mehu Weather
-FiveM standalone players synced weather script by MehukattiMies. This script is also super optimized!
+FiveM standalone players synced weather script by MehukattiMies. Changed weather type is also
+saved into `weather.json` file. 
 
 ## Installation
 For installing you dont need any other scripts.
