@@ -1,6 +1,6 @@
 # Mehu Weather
 FiveM standalone players synced weather script made by MehukattiMies. After server restart the weather
-automatically changes to last weather type which selected before. Weather saves into `weather.json` file.
+automatically changes to last weather type which was selected before. Weather saves into `weather.json` file.
 
 ## Installation
 For installing you dont need any other scripts.
