@@ -1,6 +1,9 @@
 # Mehu Weather
 FiveM standalone players synced weather script by MehukattiMies. This script is also super optimized!
 
+## Resource perfomance
+![perfomance](https://i.imgur.com/TfmKPfk.jpeg)
+
 ## Installation
 For installing you dont need any other scripts.
 
