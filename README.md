@@ -1,9 +1,6 @@
 # Mehu Weather
 FiveM standalone players synced weather script by MehukattiMies. This script is also super optimized!
 
-## Resource perfomance
-![perfomance](https://i.imgur.com/TfmKPfk.jpeg)
-
 ## Installation
 For installing you dont need any other scripts.
 
@@ -11,6 +8,9 @@ For installing you dont need any other scripts.
 >2. Change config file with your own preferences.
 >3. Put `start mehu_weather` into your `server.cfg`
 >4. All done!
+
+## Resource perfomance
+![perfomance](https://i.imgur.com/TfmKPfk.jpeg)
 
 ## Commands
 Commands for operating with script.
