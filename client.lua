@@ -15,13 +15,6 @@ AddEventHandler('client:setWeather', function(data)
 end)
 
 
-
-RegisterNetEvent('client:missingPerms')
-AddEventHandler('client:missingPerms', function()
-    print("You dont have enough permissions to change weather")
-end)
-
-
 --Set weather command for admins
 RegisterCommand('setweather', function(source, args)
     local ped = PlayerPedId()
@@ -39,6 +32,13 @@ AddEventHandler('playerSpawned', function(source)
     TriggerServerEvent('server:setWeather', source)
     Wait(1000)
     print("Updated weather to " ..weather)
+end)
+
+
+--Print if permmisions are missing
+RegisterNetEvent('client:missingPerms')
+AddEventHandler('client:missingPerms', function()
+    print("You dont have enough permissions to change weather")
 end)
 
 

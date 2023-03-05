@@ -23,9 +23,10 @@ AddEventHandler('server:setWeather', function()
 end)
 
 
+--Event for triggering weather change. Also use requires permissions to trigger
 RegisterNetEvent('server:setWeatherCommand')
 AddEventHandler('server:setWeatherCommand', function(weather_name)
-    if IsPlayerAceAllowed(source, "weather") then
+    if IsPlayerAceAllowed(source, "command") then
         TriggerEvent('server:saveWeather', weather_name)
         TriggerEvent('server:setWeather', source)
     else
