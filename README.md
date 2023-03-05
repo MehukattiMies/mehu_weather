@@ -12,7 +12,7 @@ For installing you dont need any other scripts.
 ## Commands
 Commands for operating with script.
 
-#### Admin commands
+### Admin commands
 Commands below requires `command` permission in `server.cfg`.
 
 `/setweather weather_type`
