@@ -21,3 +21,14 @@ AddEventHandler('server:setWeather', function()
     local data = LoadData()
     TriggerClientEvent('client:setWeather', -1, data)
 end)
+
+
+RegisterNetEvent('server:setWeatherCommand')
+AddEventHandler('server:setWeatherCommand', function(weather_name)
+    if IsPlayerAceAllowed(source, "weather") then
+        TriggerEvent('server:saveWeather', weather_name)
+        TriggerEvent('server:setWeather', source)
+    else
+        TriggerClientEvent('client:missingPerms', source)
+    end
+end)

@@ -8,21 +8,28 @@ AddEventHandler('client:setWeather', function(data)
         SetWeatherTypePersist(weather)
         SetWeatherTypeNow(weather)
         SetWeatherTypeNowPersist(weather)
+        print("Updated weather to " ..weather)
     else
         print("Weather type instance is missing!")
     end
 end)
 
 
+
+RegisterNetEvent('client:missingPerms')
+AddEventHandler('client:missingPerms', function()
+    print("You dont have enough permissions to change weather")
+end)
+
+
 --Set weather command for admins
 RegisterCommand('setweather', function(source, args)
+    local ped = PlayerPedId()
     if args[1] == nil then
         print("Arguments are missing")
     else
         weather = args[1]
-        TriggerServerEvent('server:saveWeather', weather)
-        TriggerServerEvent('server:setWeather', source)
-        print("Updated weather to " ..weather)
+        TriggerServerEvent('server:setWeatherCommand', weather)
     end
 end, false)
 
