@@ -17,5 +17,5 @@ Commands below requires `command` permission in `server.cfg`.
 
 `/setweather weather_type`
 
-### Weather types
+## Weather types
 `blizzard, clear, clearing, clouds, extrasunny, foggy, halloween, neutral, overcast, rain, smog, snow, snowlight, thunder, xmas`
