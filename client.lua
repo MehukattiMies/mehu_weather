@@ -1,15 +1,16 @@
-local weather
-
-
 --Update weather
 RegisterNetEvent('client:setWeather')
 AddEventHandler('client:setWeather', function(data)
     weather = dump(data["weather"])
-    ClearOverrideWeather()
-    ClearWeatherTypePersist()
-    SetWeatherTypePersist(weather)
-    SetWeatherTypeNow(weather)
-    SetWeatherTypeNowPersist(weather)
+    if weather ~= nil then
+        ClearOverrideWeather()
+        ClearWeatherTypePersist()
+        SetWeatherTypePersist(weather)
+        SetWeatherTypeNow(weather)
+        SetWeatherTypeNowPersist(weather)
+    else
+        print("Weather type instance is missing!")
+    end
 end)
 
 
@@ -28,9 +29,9 @@ end, false)
 
 --Set weather on player spawn
 AddEventHandler('playerSpawned', function(source)
-    Wait(500)
-    print("Updated weather to " ..weather)
     TriggerServerEvent('server:setWeather', source)
+    Wait(1000)
+    print("Updated weather to " ..weather)
 end)
 
 

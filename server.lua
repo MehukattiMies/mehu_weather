@@ -19,5 +19,5 @@ end
 RegisterNetEvent('server:setWeather')
 AddEventHandler('server:setWeather', function()
     local data = LoadData()
-    TriggerClientEvent('client:setWeather', source, data)
+    TriggerClientEvent('client:setWeather', -1, data)
 end)
